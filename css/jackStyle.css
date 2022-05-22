@@ -1,11 +1,8 @@
 body {
     text-align: center;
+    background-color: lightcoral;
 }
 
-p {
-    background-color: lightcoral;
-  }
-
 hr {
-    width: 50%;
+    width: 10%;
 }
