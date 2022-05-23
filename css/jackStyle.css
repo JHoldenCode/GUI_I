@@ -11,7 +11,16 @@ p {
 table {
     text-align: center;
     border: 2px solid white;
+    border-collapse: collapse;
 }
+  
+table tr {
+    border-bottom: 2px solid white;
+}
+  
+  table tr:last-child {
+    border: 0;
+  }
 
 hr {
     width: 50%;
@@ -34,3 +43,8 @@ img {
     display: block;
     margin: 0 auto;
 }
+
+ul {
+    display: table;
+    margin: 0 auto;
+  }
