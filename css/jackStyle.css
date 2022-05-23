@@ -8,8 +8,8 @@ hr {
 }
 
 img {
-    width: 400px;
+    width: 200px;
     height: auto;
-    border: 0px solid lightseagreen;
+    border: 4px solid lightseagreen;
     float: left;
 }
