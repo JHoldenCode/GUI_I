@@ -5,7 +5,7 @@ body {
 
 p {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: larger;
+    font-size: large;
 }
 
 table {
@@ -18,9 +18,9 @@ table tr {
     border-bottom: 2px solid white;
 }
   
-  table tr:last-child {
+table tr:last-child {
     border: 0;
-  }
+}
 
 hr {
     width: 50%;
