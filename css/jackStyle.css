@@ -13,3 +13,13 @@ img {
     border: 4px solid lightseagreen;
     float: left;
 }
+
+.runningShoes {
+    text-align: justify;
+    width: 200px;
+}
+
+.runningShoes img {
+    display: block;
+    margin: 0 auto;
+}
