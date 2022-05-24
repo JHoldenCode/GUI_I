@@ -52,12 +52,14 @@ img {
     float: left;
     position: absolute;
     left: 75spx;
+    bottom: 50px;
 }
 
 .right {
     float: right;
     position: absolute;
     right: 75px;
+    bottom: 50px;
 }
 
 ul {
@@ -68,5 +70,5 @@ ul {
 
 li {
     position: relative;
-    right: 10px;
+    right: 20px;
 }
