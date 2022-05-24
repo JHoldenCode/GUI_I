@@ -74,7 +74,7 @@ img {
 .left {
     float: left;
     position: absolute;
-    left: 75spx;
+    left: 75px;
 }
 
 .right {
