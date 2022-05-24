@@ -35,7 +35,7 @@ th {
 
 th.title {
     position: relative;
-    left: 150px;
+    left: 115px;
 }
 
 th.subTitle {
@@ -79,4 +79,9 @@ ul {
 li {
     position: relative;
     right: 20px;
+}
+
+footer {
+    position: absolute;
+    left: 15px;
 }
