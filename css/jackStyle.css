@@ -83,14 +83,14 @@ img {
     float: left;
     position: absolute;
     left: 75px;
-    bottom: 0px;
+    bottom: 50px;
 }
 
 .rightBottom {
     float: right;
     position: absolute;
     right: 75px;
-    bottom: 0px;
+    bottom: 50px;
 }
 
 /* All list elements are algined in the center of the page */
