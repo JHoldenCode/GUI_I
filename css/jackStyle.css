@@ -1,3 +1,4 @@
+/* styles the font of most text on the site */
 body {
     text-align: center;
     background-color: lightcoral;
@@ -8,6 +9,11 @@ p {
     font-size: large;
 }
 
+/* 
+    Creates a table with white borders around each cell and
+    centers the table. There is also an option to create 
+    a table with no borders at all 
+*/
 table {
     text-align: center;
     margin-left: auto;
@@ -33,6 +39,7 @@ th {
     border-left: 2px solid white;
 }
 
+/* Centers some text across multiple cells at the top of a table */
 th.title {
     position: relative;
     left: 115px;
@@ -50,6 +57,12 @@ hr {
     width: 50%;
 }
 
+/* 
+    All images have a 4px blueish border and have the capabiity to
+    have a centered caption below them. Depending on which class is 
+    used (left/right), the image is placed on the left or right borders
+    of the screen
+*/
 img {
     width: 200px;
     height: auto;
@@ -70,6 +83,7 @@ img {
     right: 75px;
 }
 
+/* All list elements are algined in the center of the page */
 ul {
     display: table;
     margin: 0 auto;
@@ -81,6 +95,7 @@ li {
     right: 20px;
 }
 
+/* The footer elements are placed at the bottom left of the page */
 footer {
     position: absolute;
     left: 15px;
