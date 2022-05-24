@@ -10,12 +10,15 @@ p {
 
 table {
     text-align: center;
-    border: 2px solid white;
-    border-collapse: collapse;
     margin-left: auto;
     margin-right: auto;
     table-layout: fixed;
     width: 450px;
+}
+
+table.borders {
+    border: 2px solid white;
+    border-collapse: collapse;
 }
   
 tr {
