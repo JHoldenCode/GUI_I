@@ -79,12 +79,6 @@ img {
     right: 75px;
 }
 
-.validation {
-    position: absolute;
-    left: 75px;
-    float: left;
-}
-
 /* All list elements are algined in the center of the page */
 ul {
     display: table;
