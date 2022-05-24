@@ -21,7 +21,7 @@ table.borders {
     border-collapse: collapse;
 }
   
-tr {
+tr.borders {
     border-bottom: 2px solid white;
 }
 
@@ -38,7 +38,7 @@ th.subTitle {
     border-left: 2px solid white;
 }
 
-td {
+td.borders {
     border-left: 2px solid white;
 }
 
