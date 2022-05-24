@@ -51,13 +51,13 @@ img {
 .left {
     float: left;
     position: absolute;
-    left: 100px;
+    left: 75spx;
 }
 
 .right {
     float: right;
     position: absolute;
-    right: 100px;
+    right: 75px;
 }
 
 ul {
