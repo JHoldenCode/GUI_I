@@ -82,7 +82,7 @@ img {
 .validation {
     position: absolute;
     left: 75px;
-    bottom: 75px;
+    float: left;
 }
 
 /* All list elements are algined in the center of the page */
