@@ -25,10 +25,13 @@ tr {
     border-bottom: 2px solid white;
 }
 
+th {
+    border-left: 2px solid white;
+}
+
 th.title {
     position: relative;
-    left: 75px;
-    border-left: 2px solid white;
+    left: 150px;
 }
 
 th.subTitle {
