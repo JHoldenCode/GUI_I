@@ -83,17 +83,10 @@ img {
     right: 75px;
 }
 
-.leftBottom {
+.validation {
     float: left;
     position: absolute;
     left: 75px;
-    bottom: 75px;
-}
-
-.rightBottom {
-    float: right;
-    position: absolute;
-    right: 75px;
     bottom: 75px;
 }
 
