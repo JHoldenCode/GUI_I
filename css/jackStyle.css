@@ -35,10 +35,6 @@ tr.borders {
     border-bottom: 2px solid white;
 }
 
-th {
-    border-left: 2px solid white;
-}
-
 /* Centers some text across multiple cells at the top of a table */
 th.title {
     position: relative;
