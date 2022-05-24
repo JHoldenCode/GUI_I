@@ -65,3 +65,8 @@ ul {
     margin: 0 auto;
     align-items: center;
   }
+
+li {
+    position: relative;
+    right: 10px;
+}
