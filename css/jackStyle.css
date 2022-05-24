@@ -16,6 +16,10 @@ table {
     width: 450px;
 }
 
+table.bottomLeft {
+    text-align: left;
+}
+
 table.borders {
     border: 2px solid white;
     border-collapse: collapse;
