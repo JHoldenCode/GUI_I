@@ -68,29 +68,38 @@ img {
 } 
 
 .left {
-    float: left;
     position: absolute;
     left: 75px;
+}
+
+.left2 {
+    position: absolute;
+    left: 75px;
+    top: 400px;
 }
 
 .right {
-    float: right;
     position: absolute;
     right: 75px;
+    top: 340px;
+}
+
+.right2 {
+    position: absolute;
+    right: 75px;
+    top: 590px;
 }
 
 .leftBottom {
-    float: left;
     position: absolute;
-    left: 75px;
-    top: 1100px;
+    top: 1000px;
+    left: 100px;
 }
 
 .rightBottom {
-    float: right;
     position: absolute;
-    right: 75px;
-    top: 1150px;
+    top: 1050px;
+    right: 100px;
 }
 
 /* All list elements are algined in the center of the page */
