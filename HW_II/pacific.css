@@ -1,0 +1,132 @@
+header, hgroup, nav, footer, figure, figcaption, aside, section, article {
+	display: block;
+}
+/*
+	We include the ptrbackground for the graident at the top of the screen
+	and then continue with the solid darker blue color at the bottom of the 
+	screen after the gradient ends.
+*/
+body {
+	background-image: url("ptrbackground.jpg");
+	background-color: #00569f;
+	color: #666666;
+	font-family: Arial, Helvetica, sans-serif;
+}
+/*
+	The nav bar remains at a fixed width the entire time and
+	is positioned at the left side of the screen
+*/
+nav {
+	width: 175px;
+	float: left;
+}
+nav ul {
+	font-size: 1.2em;
+}
+nav a:visited, nav a:link {
+	color: #1f2d4b;
+}
+nav a:hover {
+	color: #FFFFFF;
+}
+/*
+	The lack of text decoration is what removes the underline from
+	the links in the nav bar
+*/
+nav a {
+	text-decoration: none;
+	font-weight: bold;
+}
+h1 {
+	margin-bottom: 0;
+	padding: 10px;
+}
+h2 {
+	color: #3399CC;
+}
+h1,
+h2 {
+	font-family: Georgia, "Times New Roman", serif;
+}
+#contact {
+	font-size: 90%;
+	float: left;
+}
+dt {
+	color: #000033;
+}
+/*
+	The padding and margins are set here so that the white space taken up
+	by the footer aligns to everything within the content tag and the text
+	within the footer lines up to the text and image in the content tag
+*/
+footer {
+	font-family: Georgia, "Times New Roman", serif;
+	background-color: white;
+	text-align: left;
+	padding: 25px;
+	font-style: italic;
+	font-size: 14px;
+	margin-left: 195px;
+}
+/*
+	The padding here is what aligns the bulleted list and other
+	text on the right side of the screen
+*/
+img {
+	float: left;
+	padding-right: 20px;
+}
+/*
+	We only want one image of the sunset and we want it to be it's
+	original size so we do not mess with it's width at all and we set
+	it to no-repeat and position it on the right side. In order to
+	get the effect that the image continues on to the left of the header,
+	we set the bacground color of the entire header to be the same as the 
+	left side of the image.
+*/
+header {
+	background-image: url("sunset.jpg");
+	background-repeat: no-repeat;
+	background-position: right;
+	background-color: #000033;
+	font-weight: bold;
+	color: white;
+}
+/*
+	This centers all the content of the page and sets some rules
+	about its width based on certain page sizes
+*/
+#wrapper {
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 600px;
+	width: 80%;
+	background-color: lightblue;
+}
+#content {
+	background-color: white;
+	margin-left: 195px;
+	padding: 20px 0px 90px 25px;
+}
+/*
+	Here we set the image we want to use in place of the bullet points
+	and we set the style position to inside which is what allows the
+	bullet points to interact correctly with coastal image's padding
+*/
+#content ul {
+	list-style-image: url('marker.gif');
+	list-style-position: inside;
+}
+/* 
+	Setting the list style type to none allows us to get rid of the
+	bullet points which is necessary because we want to replace them
+	with images
+*/
+ul {
+	list-style-type: none;
+}
+.resort {
+	font-weight: bold;
+	color: rgb(28, 85, 120);
+}
