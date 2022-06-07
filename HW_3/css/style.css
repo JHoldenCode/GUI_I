@@ -1,0 +1,61 @@
+/* File: style.css
+GUI Assignment: Dynamic Multiplication Table
+Jack Holden, UMass Lowell Computer Science, John_Holden@student.uml.edu
+Copyright (c) 2021 by Jack. All rights reserved.  */
+body {
+    background-color: gold;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/* We want the form centered in the screen slightly under the header of the page with
+    a background color that contrasts well with the background color of the whole page. */
+#form {
+    margin: 50px auto 0px auto;
+    padding: 30px 0px 30px 0px;
+    width: 25%;
+    min-width: 600px;
+    background-color: darkgoldenrod;
+    text-align: center;
+}
+/* On load we do not want to see the submit button because no values have been entered. */
+#submitBtn {
+    opacity: 0;
+}
+input {
+    height: 30px;
+}
+label {
+    color: gold;
+}
+/* p tags are hidden on load because they all contain the warning messages that should
+    not be displayed at that time. */
+p {
+    color: rgb(208, 32, 32);
+    font-weight: bold;
+    opacity: 0;
+}
+table {
+    margin: 60px auto 0px auto;
+    table-layout: fixed;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+td {
+    background-color: rgb(186, 48, 186);
+    min-width: 40px;
+    min-height: 30px;
+    text-align: center;
+}
+/* The overflow attribute and fixed measurements are what allows this table
+    to become scrollable. */
+#scrollableTable {
+    overflow: auto;
+    height: 110px;
+    width: 600px;
+    height: 500px;
+    margin: 20px auto 0px auto;
+}
+h1 {
+    text-align: center;
+    padding-top: 15px;
+    color: darkgoldenrod;
+}

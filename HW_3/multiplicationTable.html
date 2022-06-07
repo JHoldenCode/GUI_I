@@ -1,0 +1,52 @@
+<!--
+File: multiplicationTable.html
+GUI Assignment: Dynamic Multiplication Table
+Jack Holden, UMass Lowell Computer Science, John_Holden@student.uml.edu
+Copyright (c) 2021 by Jack. All rights reserved. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dynamic Multiplication Table</title>
+    <meta charset="utf-8">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Dynamic Multiplication Table Generator</h1>
+    <!-- All entry boxes and buttons for the form are contained in this div so
+        that in the css file they can all be manipulated together. -->
+    <div id="form">
+        <form>
+            <!-- Instead of having any 4 random entry boxes for the user to enter values
+                into, each entry box is corrrelated to a specific min or max parameter for each
+                side of the multiplication table. The warning tags are also included here, but are
+                hidden on page load. -->
+            <label for="multiplierMin">Multiplier Minimum Value</label><br>
+            <input type="number" id="multiplierMin" name="multiplierMin" placeholder="Min Val">
+            <p id="multiplierMinWarning">Warning</p>
+            <label for="multiplierMax">Multiplier Maximum Value</label><br>
+            <input type="number" id="multiplierMax" name="multiplierMax" placeholder="Max Val">
+            <p id="multiplierMaxWarning">Warning</p>
+            <label for="multiplicandMin">Multiplicand Minimum Value</label><br>
+            <input type="number" id="multiplicandMin" name="multiplicandMin" placeholder="Min Val">
+            <p id="multiplicandMinWarning">Warning</p>
+            <label for="multiplicandMax">Multiplicand Maximum Value</label><br>
+            <input type="number" id="multiplicandMax" name="multiplicandMax" placeholder="Max Val">
+            <p id="multiplicandMaxWarning">Warning</p>
+            <!-- The reason that one of these buttons is of type button and the other is of
+                type submit is because the type submit button will reload the whole page
+                which we do not want when trying to submit values because then we will lose 
+                those values. -->
+            <input type="button" value="Submit" id="submitBtn">
+            <input type="submit" value="Reset (Clear Table)">
+        </form>
+    </div>
+    <!-- This div will contain the multiplication table after it is generated. -->
+    <div id="scrollableTable"></div>
+    </div>
+    <!-- This script contains the logic for value acceptance and dynamically creates the table
+        based off user input -->
+    <script src="js/tableCreator.js"></script>
+</body>
+
+</html>
