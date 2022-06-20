@@ -1,0 +1,53 @@
+<!--
+File: multiplicationTable.html
+GUI Assignment: Adding jQuery to Dynamic Multiplication Table
+Jack Holden, UMass Lowell Computer Science, John_Holden@student.uml.edu
+Copyright (c) 2021 by Jack. All rights reserved. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dynamic Multiplication Table</title>
+    <meta charset="utf-8">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Include jQuery, jQuery Validation Plugin, and my own validation script for this project -->
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.js"></script>
+    <script src="js/validateForm.js"></script>
+</head>
+<body>
+    <h1>Dynamic Multiplication Table Generator</h1>
+    <!-- All entry boxes and buttons for the form are contained in this div so
+        that in the css file they can all be manipulated together. -->
+    <div id="form">
+        <form id="numberForm" method="get" action="">
+            <p>
+                <label for="multiplierMin">Multiplier Minimum</label><br>
+                <input id="multiplierMin" name="multiplierMin" type="number"/>
+            </p>
+            <p>
+                <label for="multiplierMax">Multiplier Maximum</label><br>
+                <input id="multiplierMax" name="multiplierMax" type="number"/>
+            </p>
+            <p>
+                <label for="multiplicandMin">Multiplicand Minimum</label><br>
+                <input id="multiplicandMin" name="multiplicandMin" type="number"/>
+            </p>
+            <p>
+                <label for="multiplicandMax">Multiplicand Maximum</label><br>
+                <input id="multiplicandMax" name="multiplicandMax" type="number"/>
+            </p>
+            <p>
+                <input class="submit" type="submit" value="Submit"/>
+            </p>
+        </form>
+    </div>
+    <!-- This div will contain the multiplication table after it is generated. -->
+    <div id="scrollableTable"></div>
+    </div>
+    <!-- This script dynamically creates the multiplication table based off of the 
+        values submitted in the form -->
+    <script src="js/tableCreator.js"></script>
+</body>
+
+</html>
