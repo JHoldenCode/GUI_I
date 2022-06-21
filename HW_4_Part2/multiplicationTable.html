@@ -1,0 +1,75 @@
+<!--
+File: multiplicationTable.html
+GUI Assignment: Adding jQuery to Dynamic Multiplication Table Part 2
+Jack Holden, UMass Lowell Computer Science, John_Holden@student.uml.edu
+Copyright (c) 2021 by Jack. All rights reserved. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dynamic Multiplication Table</title>
+    <meta charset="utf-8">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Include UI CSS file -->
+    <link href="https://code.jquery.com/ui/1.11.4/themes/cupertino/jquery-ui.css" rel="stylesheet">
+    <!-- Include jQuery, jQuery Validation Plugin, and my own validation script for this project -->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.js"></script>
+    <script src="js/validateForm.js"></script>
+    <!-- Include UI JQuery file -->
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+</head>
+<body>
+    <h1>Dynamic Multiplication Table Generator</h1>
+    <!-- All entry boxes and buttons for the form are contained in this div so
+        that in the css file they can all be manipulated together. -->
+    <div id="form">
+        <form id="numberForm" method="get" action="">
+            <p>
+                <label for="multiplierMin">Multiplier Minimum</label><br>
+                <input id="multiplierMin" name="multiplierMin" type="number"/>
+                <div class="slider" id="multiplierMinSlider">
+                </div>
+            </p>
+            <p>
+                <label for="multiplierMax">Multiplier Maximum</label><br>
+                <input id="multiplierMax" name="multiplierMax" type="number"/>
+                <div class="slider" id="multiplierMaxSlider">
+                </div>
+            </p>
+            <p>
+                <label for="multiplicandMin">Multiplicand Minimum</label><br>
+                <input id="multiplicandMin" name="multiplicandMin" type="number"/>
+                <div class="slider" id="multiplicandMinSlider">
+                </div>
+            </p>
+            <p>
+                <label for="multiplicandMax">Multiplicand Maximum</label><br>
+                <input id="multiplicandMax" name="multiplicandMax" type="number"/>
+                <div class="slider" id="multiplicandMaxSlider">
+                </div>
+            </p>
+            <p>
+                <input id="submit" class="submit" type="submit" value="Save"/>
+            </p>
+        </form>
+        <!-- This button deletes any tabs designated as "DELETE" -->
+        <button id="deleteTabs">Delete Selected Tab(s)</button>
+    </div>
+    <!-- This div will contain the multiplication table after it is generated. -->
+    <div id="scrollableTable"></div>
+    </div>
+    <!-- This is the base HTML for what will become the tabbed interface after
+        a table is added to it -->
+    <div id="myTabs">
+        <ul>
+        </ul>
+    </div>
+    <!-- This script dynamically creates the multiplication table based off of the 
+        values submitted in the form -->
+    <script src="js/tableCreator.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/tabs.js"></script>
+</body>
+
+</html>
