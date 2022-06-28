@@ -54,8 +54,8 @@ function getRandomLetter(letter) {
     }
 
     const selectedLetter = tileArr[correlatedLetterIndex].letter;
-    const imgURL = "url(../imgs/letters/Scrabble_Tile_" + selectedLetter + ".jpg)";
-    // letter.style.backgroundImage = imgURL;
+    const imgURL = "url(./imgs/letters/Scrabble_Tile_" + selectedLetter + ".jpg)";
+    letter.style.backgroundImage = imgURL;
     letter.points = tileArr[correlatedLetterIndex].points;
 
     lettersLeft--;
@@ -142,7 +142,7 @@ function saveJSON() {
 }
 
 $(function() {
-    // saveJSON();
+    saveJSON();
     initializeLetterSpaces();
-    // addButtonListeners();
+    addButtonListeners();
 })
