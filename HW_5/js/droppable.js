@@ -62,6 +62,8 @@ function newLetterAdded(index, points) {
         }
         $("#playWord")[0].style.opacity = 1;
         $("#playWord")[0].classList.add("enabled");
+        $("#resetWord")[0].style.opacity = 1;
+        $("#resetWord")[0].classList.add("enabled");
     }
     droppableArr[index].points = points;
     letterAdded = true;

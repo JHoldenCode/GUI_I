@@ -84,6 +84,16 @@ function addButtonListeners() {
         $("#score").html(0);
         $("#lettersLeftVal").html(lettersLeft);
     });
+
+    $("#resetWord")[0].addEventListener('click', () => {
+        resetDraggableElements();
+        resetDroppableElements();
+        for (let i = 0; i < draggableArr.length; i++) {
+            draggableArr[i].style.inset = null;
+            draggableArr[i].style.right = String(leftPoint - i * (spacingBetween + letterWidth)) + "px";
+            draggableArr[i].style.bottom = "95px";
+        }
+    })
 }
 
 function scoringHandler() {
@@ -110,6 +120,8 @@ function rackLetterHandler(reset = false) {
 function resetDraggableElements() {
     $("#playWord")[0].classList.remove("enabled");
     $("#playWord")[0].style.opacity = 0.5;
+    $("#resetWord")[0].classList.remove("enabled");
+    $("#resetWord")[0].style.opacity = 0.5;
     for (let i = 0; i < draggableArr.length; i++) {
         $("#letter" + i).draggable("enable");
     }

@@ -53,6 +53,7 @@ body {
     height: 54px;
     width: 59.5px;
     position: fixed;
+    background-image: url("../imgs/letters/Scrabble_Tile_A.jpg");
     background-size: 59.5px 54px;
     bottom: 95px;
 }
@@ -77,6 +78,7 @@ button {
     margin: auto;
     display: flex;
     position: relative;
+    width: 1000px;
 }
 #restart {
     width: 65px;
