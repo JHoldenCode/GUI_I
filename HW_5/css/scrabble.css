@@ -1,0 +1,103 @@
+body {
+    margin: auto;
+    background-image: url("../imgs/scrabbleBackground.jpg");
+    background-size: cover;
+}
+#gameInfo {
+    height: 60px;
+    width: 100%;
+    background-color: antiquewhite;
+    display: inline-flex;
+    margin: auto;
+}
+#scrabbleBackground {
+    height: 160px;
+    width: 1000px;
+    margin: 60px auto 0px auto;
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#scrabbleBoard {
+    width: 900px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#scrabbleBoardImg {
+    width: 100%;
+}
+#rackBackground {
+    height: 120px;
+    width: 600px;
+    margin: 85px auto 0px auto;
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#playerRack {
+    height: 90px;
+    width: 530px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#playerRackImg {
+    height: 70px;
+    width: 475px;
+}
+.rackLetter {
+    height: 54px;
+    width: 59.5px;
+    position: fixed;
+    background-size: 59.5px 54px;
+    bottom: 95px;
+}
+.scrabbleTile {
+    height: 54px;
+    width: 59px;
+    position: fixed;
+    top: 173px;
+}
+button {
+    background-color: lightgreen;
+    width: 50px;
+    height: 40px;
+    font-weight: bold;
+    margin: auto;
+    display: flex;
+    position: relative;
+    bottom: 44px;
+    opacity: 0.5;
+}
+#buttonInterface {
+    margin: auto;
+    display: flex;
+    position: relative;
+}
+#restart {
+    width: 65px;
+    background-color: lightcoral;
+    opacity: 1;
+}
+#resetWord {
+    background-color: orange;
+}
+h3 {
+    margin-left: 50px;
+}
+#score, #highScore {
+    margin-left: 15px;
+}
+h1 {
+    margin: auto;
+}
+#lettersLeft {
+    margin-right: 15px;
+}
+#lettersLeftVal {
+    margin-right: 50px;
+}

@@ -1,0 +1,139 @@
+{
+    "tiles": [
+        {
+            "letter": "A",
+            "numLeft": 9,
+            "points": 1
+        },
+        {
+            "letter": "B",
+            "numLeft": 2,
+            "points": 3
+        },
+        {
+            "letter": "C",
+            "numLeft": 2,
+            "points": 3
+        },
+        {
+            "letter": "D",
+            "numLeft": 4,
+            "points": 2
+        },
+        {
+            "letter": "E",
+            "numLeft": 12,
+            "points": 1
+        },
+        {
+            "letter": "F",
+            "numLeft": 2,
+            "points": 4
+        },
+        {
+            "letter": "G",
+            "numLeft": 3,
+            "points": 2
+        },
+        {
+            "letter": "H",
+            "numLeft": 2,
+            "points": 4
+        },
+        {
+            "letter": "I",
+            "numLeft": 9,
+            "points": 1
+        },
+        {
+            "letter": "J",
+            "numLeft": 1,
+            "points": 8
+        },
+        {
+            "letter": "K",
+            "numLeft": 1,
+            "points": 5
+        },
+        {
+            "letter": "L",
+            "numLeft": 4,
+            "points": 1
+        },
+        {
+            "letter": "M",
+            "numLeft": 2,
+            "points": 3
+        },
+        {
+            "letter": "N",
+            "numLeft": 6,
+            "points": 1
+        },
+        {
+            "letter": "O",
+            "numLeft": 8,
+            "points": 1
+        },
+        {
+            "letter": "P",
+            "numLeft": 2,
+            "points": 3
+        },
+        {
+            "letter": "Q",
+            "numLeft": 1,
+            "points": 10
+        },
+        {
+            "letter": "R",
+            "numLeft": 6,
+            "points": 1
+        },
+        {
+            "letter": "S",
+            "numLeft": 4,
+            "points": 1
+        },
+        {
+            "letter": "T",
+            "numLeft": 6,
+            "points": 1
+        },
+        {
+            "letter": "U",
+            "numLeft": 4,
+            "points": 1
+        },
+        {
+            "letter": "V",
+            "numLeft": 2,
+            "points": 4
+        },
+        {
+            "letter": "W",
+            "numLeft": 2,
+            "points": 4
+        },
+        {
+            "letter": "X",
+            "numLeft": 1,
+            "points": 8
+        },
+        {
+            "letter": "Y",
+            "numLeft": 2,
+            "points": 4
+        },
+        {
+            "letter": "Z",
+            "numLeft": 1,
+            "points": 10
+        },
+        {
+            "letter": "Blank",
+            "numLeft": 2,
+            "points": 0
+        }
+    ]
+}
