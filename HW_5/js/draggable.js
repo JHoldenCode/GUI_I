@@ -54,7 +54,7 @@ function getRandomLetter(letter) {
     }
 
     const selectedLetter = tileArr[correlatedLetterIndex].letter;
-    const imgURL = "url(../imgs/letters/Scrabble_Tile_" + selectedLetter + ".jpg)";
+    const imgURL = "url(../imgs/letters/Scrabble_Tile_" + selectedLetter + ".JPG)";
     letter.style.backgroundImage = imgURL;
     letter.points = tileArr[correlatedLetterIndex].points;
 
