@@ -1,6 +1,6 @@
 body {
     margin: auto;
-    background-image: url("../imgs/scrabbleBackground.JPG");
+    background-image: url("../imgs/scrabbleBackground.jpg");
     background-size: cover;
 }
 #gameInfo {
@@ -53,7 +53,6 @@ body {
     height: 54px;
     width: 59.5px;
     position: fixed;
-    background-image: url("../imgs/letters/Scrabble_Tile_A.JPG");
     background-size: 59.5px 54px;
     bottom: 95px;
 }
