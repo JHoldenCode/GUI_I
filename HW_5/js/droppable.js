@@ -34,6 +34,7 @@ function initializeDropZones() {
     const midPointIndex = 7;
     const midPoint = 612.5;
     const spacingBetween = 59.7;
+    const largerScreenSizePadding = screen.width > 1280 ? (screen.width - 1280) / 2 : 0;
 
     var scrabbleBoard = $("#scrabbleBoard")[0];
     for (let i = 0; i < 15; i++) {
@@ -53,7 +54,7 @@ function initializeDropZones() {
         }
 
         newZone.id = "tile" + i;
-        newZone.style.left = String((i - midPointIndex) * spacingBetween + midPoint) + "px";
+        newZone.style.left = String((i - midPointIndex) * spacingBetween + midPoint + largerScreenSizePadding) + "px";
         scrabbleBoard.appendChild(newZone);
         droppableArr.push(newZone);
     }

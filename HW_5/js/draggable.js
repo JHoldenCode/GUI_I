@@ -25,13 +25,14 @@ var draggableOpts = {
 }
 
 function initializeLetterSpaces() {
+    const largerScreenSizePadding = screen.width > 1280 ? (screen.width - 1280) / 2 : 0;
     var playerRack = $("#playerRack")[0];
     for (let i = 0; i < 7; i++) {
         // positioning, initialization
         var newLetter = document.createElement('div');
         newLetter.classList.add("rackLetter");
         newLetter.id = "letter" + i;
-        newLetter.style.left = String(leftPoint + i * (spacingBetween + letterWidth)) + "px";
+        newLetter.style.left = String(leftPoint + i * (spacingBetween + letterWidth) + largerScreenSizePadding) + "px";
 
         getRandomLetter(newLetter);
 
@@ -102,9 +103,10 @@ function addButtonListeners() {
     $("#resetWord")[0].addEventListener('click', () => {
         resetDraggableElements();
         resetDroppableElements();
+        const largerScreenSizePadding = screen.width > 1280 ? (screen.width - 1280) / 2 : 0;
         for (let i = 0; i < draggableArr.length; i++) {
             draggableArr[i].style.inset = null;
-            draggableArr[i].style.left = String(leftPoint + i * (spacingBetween + letterWidth)) + "px";
+            draggableArr[i].style.left = String(leftPoint + i * (spacingBetween + letterWidth) + largerScreenSizePadding) + "px";
             draggableArr[i].style.top = "430px";
         }
     })
@@ -123,13 +125,14 @@ function scoringHandler() {
 // sends all played letter tiles back to their correct spot on the player rack
 // and resets their states
 function rackLetterHandler(reset = false) {
+    const largerScreenSizePadding = screen.width > 1280 ? (screen.width - 1280) / 2 : 0;
     for (let i = 0; i < draggableArr.length; i++) {
         if ($("#letter" + i).draggable("option", "disabled") || reset) {
             draggableArr[i].style.opacity = 0;
             // this line resets the css change made by the animate function in the
             // droppableOpts drop function
             draggableArr[i].style.inset = null;
-            draggableArr[i].style.left = String(leftPoint + i * (spacingBetween + letterWidth)) + "px";
+            draggableArr[i].style.left = String(leftPoint + i * (spacingBetween + letterWidth) + largerScreenSizePadding) + "px";
             draggableArr[i].style.top = "430px";
             getRandomLetter(draggableArr[i]);
             draggableArr[i].style.opacity = 1;
