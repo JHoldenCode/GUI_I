@@ -39,7 +39,7 @@ function initializeDropZones() {
         }
 
         newZone.id = "tile" + i;
-        newZone.style.right = String((midPointIndex - i) * spacingBetween + midPoint) + "px";
+        newZone.style.left = String((i - midPointIndex) * spacingBetween + midPoint) + "px";
         scrabbleBoard.appendChild(newZone);
         droppableArr.push(newZone);
     }

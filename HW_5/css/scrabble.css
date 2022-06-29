@@ -2,6 +2,10 @@ body {
     margin: auto;
     background-image: url("../imgs/scrabbleBackground.jpg");
     background-size: cover;
+    min-width: 1280px;
+    max-width: 1280px;
+    min-height: 720px;
+    max-height: 720px;
 }
 #gameInfo {
     height: 60px;
@@ -52,14 +56,14 @@ body {
 .rackLetter {
     height: 54px;
     width: 59.5px;
-    position: fixed;
+    position: absolute;
     background-size: 59.5px 54px;
-    bottom: 95px;
+    top: 430px;
 }
 .scrabbleTile {
     height: 54px;
     width: 59px;
-    position: fixed;
+    position: absolute;
     top: 173px;
 }
 button {

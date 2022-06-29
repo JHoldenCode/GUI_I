@@ -1,6 +1,7 @@
 import tileStructure from "../json/tileStructure.json" assert { type: "json" };
 
-const leftPoint = 820;
+// const leftPoint = 820;
+const leftPoint = 400;
 const letterWidth = 59.5;
 const spacingBetween = 10;
 
@@ -21,7 +22,7 @@ function initializeLetterSpaces() {
         var newLetter = document.createElement('div');
         newLetter.classList.add("rackLetter");
         newLetter.id = "letter" + i;
-        newLetter.style.right = String(leftPoint - i * (spacingBetween + letterWidth)) + "px";
+        newLetter.style.left = String(leftPoint + i * (spacingBetween + letterWidth)) + "px";
 
         getRandomLetter(newLetter);
 
@@ -90,8 +91,8 @@ function addButtonListeners() {
         resetDroppableElements();
         for (let i = 0; i < draggableArr.length; i++) {
             draggableArr[i].style.inset = null;
-            draggableArr[i].style.right = String(leftPoint - i * (spacingBetween + letterWidth)) + "px";
-            draggableArr[i].style.bottom = "95px";
+            draggableArr[i].style.left = String(leftPoint + i * (spacingBetween + letterWidth)) + "px";
+            draggableArr[i].style.top = "430px";
         }
     })
 }
@@ -109,8 +110,8 @@ function rackLetterHandler(reset = false) {
         if ($("#letter" + i).draggable("option", "disabled") || reset) {
             draggableArr[i].style.opacity = 0;
             draggableArr[i].style.inset = null;
-            draggableArr[i].style.right = String(leftPoint - i * (spacingBetween + letterWidth)) + "px";
-            draggableArr[i].style.bottom = "95px";
+            draggableArr[i].style.left = String(leftPoint + i * (spacingBetween + letterWidth)) + "px";
+            draggableArr[i].style.top = "430px";
             getRandomLetter(draggableArr[i]);
             draggableArr[i].style.opacity = 1;
         }
