@@ -1,6 +1,6 @@
 <!--
-File: 
-GUI Assignment: 
+File: scrabble.html
+GUI Assignment: Recreating Scrabble
 Jack Holden, UMass Lowell Computer Science, John_Holden@student.uml.edu
 Copyright (c) 2021 by Jack. All rights reserved. 
 -->
@@ -12,15 +12,14 @@ Copyright (c) 2021 by Jack. All rights reserved.
     <link href="css/scrabble.css" rel="stylesheet">
     <!-- Include UI CSS file -->
     <link href="https://code.jquery.com/ui/1.11.4/themes/cupertino/jquery-ui.css" rel="stylesheet">
-    <!-- Include jQuery, jQuery Validation Plugin, and my own validation script for this project -->
+    <!-- Include jQuery and jQuery UI -->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.js"></script> -->
-    <!-- <script src="js/validateForm.js"></script> -->
-    <!-- Include JQuery UI file -->
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 </head>
 <body>
     <div id="wrapper">
+        <!-- top banner that includes the title and information about the score and
+            remaining letters -->
         <div id="gameInfo">
             <h3>Score:</h2>
             <h4 id="score">0</h4>
@@ -30,16 +29,20 @@ Copyright (c) 2021 by Jack. All rights reserved.
             <h3 id="lettersLeft">Letters Left:</h3>
             <h4 id="lettersLeftVal">93</h4>
         </div>
+        <!-- contains the scrabble line image as well as all droppables for each
+            tile on the board -->
         <div id="scrabbleBackground">
             <div id="scrabbleBoard">
                 <img src="imgs/scrabbleBoardOneLine.png" alt="Scrabble Board" id="scrabbleBoardImg">
             </div>
         </div>
+        <!-- contains all buttons used to submit answers and change game states -->
         <div id="buttonInterface">
             <button id="restart">Restart Game</button>
             <button id="playWord">Play Word!</button>
             <button id="resetWord">Reset Word</button>
         </div>
+        <!-- contains the image of the player rack as well as all draggable letters -->
         <div id="rackBackground">
             <div id="playerRack">
                 <img src="imgs/playerRack.png" alt="Player Rack" id="playerRackImg">

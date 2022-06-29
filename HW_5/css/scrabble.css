@@ -1,3 +1,10 @@
+/* File: scrabble.css
+GUI Assignment: Recreating Scrabble
+Jack Holden, UMass Lowell Computer Science, John_Holden@student.uml.edu
+Copyright (c) 2021 by Jack. All rights reserved.  */
+
+/* The body needs to be the exact size on every different broswer and
+    computer so that all draggables and droppables are positioned correctly */
 body {
     margin: auto;
     background-image: url("../imgs/scrabbleBackground.jpg");
@@ -7,6 +14,8 @@ body {
     min-height: 720px;
     max-height: 720px;
 }
+/* game info banner should span all of body and the text should not
+    bump anything down */
 #gameInfo {
     height: 60px;
     width: 100%;
@@ -14,6 +23,7 @@ body {
     display: inline-flex;
     margin: auto;
 }
+/* all content within the scrabble background should be centered */
 #scrabbleBackground {
     height: 160px;
     width: 1000px;
@@ -33,6 +43,7 @@ body {
 #scrabbleBoardImg {
     width: 100%;
 }
+/* all content within the rakc background should be centered */
 #rackBackground {
     height: 120px;
     width: 600px;
@@ -53,6 +64,8 @@ body {
     height: 70px;
     width: 475px;
 }
+/* rack letters use absolute positioning to stay in the correct spot
+    no matter the window size */
 .rackLetter {
     height: 54px;
     width: 59.5px;
@@ -60,12 +73,15 @@ body {
     background-size: 59.5px 54px;
     top: 430px;
 }
+/* scrabble tiles use absolute positioning to stay in the correct spot
+    no matter the window size */
 .scrabbleTile {
     height: 54px;
     width: 59px;
     position: absolute;
     top: 173px;
 }
+/* the button default state is inactive as shown by the 50% opacity */
 button {
     background-color: lightgreen;
     width: 50px;
@@ -77,12 +93,14 @@ button {
     bottom: 44px;
     opacity: 0.5;
 }
+/* button interface needs to stay within the bounds of the scrabble background */
 #buttonInterface {
     margin: auto;
     display: flex;
     position: relative;
     width: 1000px;
 }
+/* restart button is always active */
 #restart {
     width: 65px;
     background-color: lightcoral;

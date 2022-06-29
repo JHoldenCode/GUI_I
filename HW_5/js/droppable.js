@@ -1,3 +1,9 @@
+// File: droppable.js
+// GUI Assignment: Recreating Scrabble
+// Jack Holden, UMass Lowell Computer Science, John_Holden@student.uml.edu
+// Copyright (c) 2021 by Jack. All rights reserved. 
+
+// array to store the droppables of all board tiles for easy access
 var droppableArr = [];
 var letterAdded = false;
 var droppableOpts = {
@@ -12,6 +18,8 @@ var droppableOpts = {
           left: '+=' + left_end
         });
 
+        // on drop we want to change the states of the droppable and draggable so that
+        // they cannot be moved or dropped on again
         $(this).addClass("full");
         newLetterAdded(Number(this.id.substring(4)), ui.draggable[0].points);
         ui.draggable.draggable("disable");
@@ -22,13 +30,19 @@ var droppableOpts = {
 }
 
 function initializeDropZones() {
+    // pixel measuring constants used to place droppables
     const midPointIndex = 7;
     const midPoint = 612.5;
     const spacingBetween = 59.7;
+
     var scrabbleBoard = $("#scrabbleBoard")[0];
     for (let i = 0; i < 15; i++) {
         var newZone = document.createElement('div');
 
+        // all dropzones start off as 'open' because the user can
+        // place their first letter tile anywhere
+        // add the special class distinctions for the double word and
+        // double letter tiles
         newZone.classList.add("scrabbleTile", "open");
         if (i === 2 || i === 12) {
             newZone.classList.add("DW");
@@ -49,12 +63,17 @@ function initializeDropZones() {
 function toggleDroppableState(toClosed, index) {
     const removeClass = toClosed ? "open" : "closed";
     const addClass = toClosed ? "closed" : "open";
+    // if the droppable is not full with a letter tile, its state
+    // may be changed
     if (droppableArr[index] && !checkForClass(droppableArr[index].classList, "full")) {
         droppableArr[index].classList.remove(removeClass);
         droppableArr[index].classList.add(addClass);
     }
 }
 
+// when a new letter is added  for the first time all droppables are set to closed
+// for the first time and every subsequent time after, the droppable at the index
+// before and after the dropped index has their state toggled to open
 function newLetterAdded(index, points) {
     if (!letterAdded) {
         for (let i = 0; i < droppableArr.length; i++) {
@@ -71,6 +90,7 @@ function newLetterAdded(index, points) {
     toggleDroppableState(false, index + 1);
 }
 
+// checks if a droppable has a class
 function checkForClass(arr, className) {
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] === className) {
@@ -98,6 +118,7 @@ function calculateScore() {
     return sum * wordMultiplier;
 }
 
+// sets all droppables back to their initial state
 function resetDroppableElements() {
     letterAdded = false;
     for (let i = 0; i < droppableArr.length; i++) {
@@ -106,6 +127,7 @@ function resetDroppableElements() {
     }
 }
 
+// called on load
 $(function() {
     initializeDropZones();
 })

@@ -1,12 +1,21 @@
+// File: draggable.js
+// GUI Assignment: Recreating Scrabble
+// Jack Holden, UMass Lowell Computer Science, John_Holden@student.uml.edu
+// Copyright (c) 2021 by Jack. All rights reserved. 
+
+// tile structure includes the points associated with each letter and how many
+// of each letter are left
 import tileStructure from "../json/tileStructure.json" assert { type: "json" };
 
-// const leftPoint = 820;
+// constants used to position the letter tile draggables.
 const leftPoint = 400;
 const letterWidth = 59.5;
 const spacingBetween = 10;
 
 var lettersLeft = 100;
 var draggableArr = [];
+
+// used to restore the json values after a reset
 var saveOGTileNums = [];
 var draggableOpts = {
     revert:  function(dropZone) {
@@ -32,22 +41,22 @@ function initializeLetterSpaces() {
     $(".rackLetter").draggable(draggableOpts);
 }
 
-function sumJS(arr) {
-    let sum = 0;
-    for (let i = 0; i < tileStructure.tiles.length; i++) {
-        sum += tileStructure.tiles[i].numLeft;
-    }
-    return sum;
-}
-
 function getRandomLetter(letter) {
+    // if there are no more letters left, make them inactive and invisible
     if (lettersLeft <= 0) {
         letter.style.backgroundImage = null;
+        $(letter.id).draggable("disable");
+        draggableArr[Number(letter.id.substring(6))].classList.add("invisible");
         return;
     }
     var tileArr = tileStructure.tiles;
+    // an index (initially 0 to 99) that represents the index of the JSON object
+    // that we use to retrieve a random letter
     var selectedLetterIndex = Math.round(Math.random() * (lettersLeft - 1));
+    // represents a letter: 0: A, 1: B...
     var correlatedLetterIndex = 0;
+    // this algorithm parses through the JSON object like an aray in order to find the letter
+    // associated with the randomly selected index
     var currentIndex = tileArr[correlatedLetterIndex].numLeft - 1;
     while (currentIndex < selectedLetterIndex || tileArr[correlatedLetterIndex].numLeft <= 0) {
         correlatedLetterIndex++;
@@ -60,6 +69,7 @@ function getRandomLetter(letter) {
     letter.points = tileArr[correlatedLetterIndex].points;
 
     lettersLeft--;
+    // modifys JSON
     tileArr[correlatedLetterIndex].numLeft--;
 }
 
@@ -79,9 +89,12 @@ function addButtonListeners() {
     $("#restart")[0].addEventListener('click', () => {
         lettersLeft = 100;
         resetJSON();
+        // the 'true' argument in these function calls bypasses some conditionals
+        // that are not relevant when completely resetting the game
         rackLetterHandler(true);
-        resetDraggableElements();
+        resetDraggableElements(true);
         resetDroppableElements();
+        // reset score and letters left
         $("#score").html(0);
         $("#lettersLeftVal").html(lettersLeft);
     });
@@ -97,6 +110,8 @@ function addButtonListeners() {
     })
 }
 
+// increases score based on the score of the submitted word and updates high score
+// accordingly
 function scoringHandler() {
     var score = calculateScore();
     $("#score").html(Number($("#score").html()) + score);
@@ -105,10 +120,14 @@ function scoringHandler() {
     }
 }
 
+// sends all played letter tiles back to their correct spot on the player rack
+// and resets their states
 function rackLetterHandler(reset = false) {
     for (let i = 0; i < draggableArr.length; i++) {
         if ($("#letter" + i).draggable("option", "disabled") || reset) {
             draggableArr[i].style.opacity = 0;
+            // this line resets the css change made by the animate function in the
+            // droppableOpts drop function
             draggableArr[i].style.inset = null;
             draggableArr[i].style.left = String(leftPoint + i * (spacingBetween + letterWidth)) + "px";
             draggableArr[i].style.top = "430px";
@@ -118,16 +137,20 @@ function rackLetterHandler(reset = false) {
     }
 }
 
-function resetDraggableElements() {
+// resets button states and the class of draggable elements
+function resetDraggableElements(restartGame = false) {
     $("#playWord")[0].classList.remove("enabled");
     $("#playWord")[0].style.opacity = 0.5;
     $("#resetWord")[0].classList.remove("enabled");
     $("#resetWord")[0].style.opacity = 0.5;
     for (let i = 0; i < draggableArr.length; i++) {
-        $("#letter" + i).draggable("enable");
+        if (!checkForClass($("#letter" + i)[0].classList, "invisible") || restartGame) {
+            $("#letter" + i).draggable("enable");
+        }
     }
 }
 
+// reverts JSON structure back to original state using saved deep copy after a restart
 function resetJSON() {
     for (let i = 0; i < tileStructure.tiles.length; i++) {
         const letterObj = {...saveOGTileNums[i]};
@@ -135,6 +158,7 @@ function resetJSON() {
     }
 }
 
+// stores a deep copy of the json into saveOGTileNums
 function saveJSON() {
     for (let i = 0; i < tileStructure.tiles.length; i++) {
         const letterObj = tileStructure.tiles[i];
@@ -142,6 +166,7 @@ function saveJSON() {
     }
 }
 
+// called on load
 $(function() {
     saveJSON();
     initializeLetterSpaces();
