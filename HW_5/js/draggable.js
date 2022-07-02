@@ -5,7 +5,7 @@
 
 // tile structure includes the points associated with each letter and how many
 // of each letter are left
-import tileStructure from "../json/tileStructure.json" assert { type: "json" };
+import tileStructure from "../json/tileStructure.json";
 
 // constants used to position the letter tile draggables.
 const leftPoint = 400;
